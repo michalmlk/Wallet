@@ -5,37 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wallet</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/73f9b9df0e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="wrapper">
-        <h1>Exhange rate</h1>
-        <p>Check actual values</p>
-        <div class="app-body">
-            <div class="section-left">
-                <input type="number" class="am1" value="1">
-                <select id="curr-one">
-                    <option value="PLN" selected>PLN</option>
-                    <option value="EUR">EUR</option>
-                    <option value="USD">USD</option>
-                    <option value="GBP">GBP</option>
-                </select>
-            </div>
-            <button class="swap">SWAP</button>
-            <div class="section-right">
-                <input type="number" class="am2" disabled>
-                <select id="curr-two">
-                    <option value="PLN">PLN</option>
-                    <option value="EUR" selected>EUR</option>
-                    <option value="USD">USD</option>
-                    <option value="GBP">GBP</option>
-                </select>
+        <button class="dmode"><i class="fa-solid fa-sun"></i></button>
+        <div class="incomes box">
+            <h1>Incomes</h1>
+            <p class="cash">0</p>
+        </div>
+        <div class="exp box">
+            <h1>Expenses</h1>
+            <p class="cash">0</p>
+        </div>
+        <div class="money box">
+            <h1>Avaiable money</h1>
+            <p class="cash"></p>
+            <div class="buttons">
+                <button class="btn add">Add transaction</button>
+                <button class="btn del">Delete all</button>
             </div>
         </div>
-        <p class="rate-info">
-        </p>
+        <div class="history box">
+            <h1>History</h1>
+        </div>
+    </div>
+    <div class="popup">
+        <h1>Add transaction</h1>
+        <select name="category" id="category">
+            <option value="daily">daily</option>
+            <option value="shopping">shopping</option>
+            <option value="payment">payment</option>
+        </select>
+        <input type="number" placeholder="value" id="val">
+        <button class="btn add">Add</button>
+        <button class="btn del">Back</button>
+        <p class="errorInfo"></p>
     </div>
     <script src="index.js"></script>
 </body>
