@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@200;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Smooch Sans', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(43,18,18,1) 100%, rgba(135,204,85,1) 100%);
+}
+.wrapper{
+padding: 20px;
+display: flex;
+flex-flow: column wrap;
+align-items: center;
+justify-content: space-around;
+background-color: rgb(41,41,41);
+color: #fff;
+width: 50vw;
+height: 30vh;
+border-radius: 5px;
+}
+.swap{
+    align-self: center;
+    background-color: transparent;
+    border: 1px solid #fff;
+    width: 50px;
+    height: 25px;
+    color: #fff;
+}
+.app-body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.app-body input,
+.app-body select{
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding-left: 10px;
+    height: 40px;
+    font-size: 32px;
+}
+.app-body input:focus,
+.app-body select:focus{
+    outline: none;
+    color: rgb(69, 212, 89);
+}
+.app-body select{
+    background-color: rgb(41,41,41);
+    outline: none;
+    transition: .3s;
+    cursor: pointer;
+}
+.app-body select:hover{
+    background-color: rgb(43, 109, 63);
+}
+.wrapper h1{
+    font-size: 42px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Exhange rate</h1>
+        <p>Check actual values</p>
+        <div class="app-body">
+            <div class="section-left">
+                <input type="number" class="am1" value="1">
+                <select id="curr-one">
+                    <option value="PLN" selected>PLN</option>
+                    <option value="EUR">EUR</option>
+                    <option value="USD">USD</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </div>
+            <button class="swap">SWAP</button>
+            <div class="section-right">
+                <input type="number" class="am2" disabled>
+                <select id="curr-two">
+                    <option value="PLN">PLN</option>
+                    <option value="EUR" selected>EUR</option>
+                    <option value="USD">USD</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </div>
+        </div>
+        <p class="rate-info">
+        </p>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
