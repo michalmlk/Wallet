@@ -12,6 +12,7 @@ const popupCloseBtn = document.querySelector('.popup>.del')
 const errorInfo = document.querySelector('.errorInfo')
 // history section
 const history = document.querySelector('.history>ul')
+const group = document.querySelector('#category')
 
 // adding and removing resources
 const addResources = (val) => {
@@ -46,9 +47,26 @@ const createRecord = (cat, val) => {
     cat === 'payment' ? transVal.textContent = `${val}$` : transVal.textContent = `-${val}$`
     category.textContent = `${cat}`
     newRecord.append(transVal, category)
+    newRecord.setAttribute('cat',cat)
     history.append(newRecord)
     // expences and incomes color 
     Number(avbMoney.textContent) <= 0 ? document.querySelector('.money>.cash').style.color = 'red' : document.querySelector('.money>.cash').style.color = 'green'
+}
+const groupExpenditures = () =>{
+    const val = group.value
+    const exps = history.querySelectorAll('.record')
+    console.log(exps);
+    console.log(val);
+    exps.forEach(e=>{
+        const recCat = e.getAttribute('cat')
+        if(recCat===val){
+            e.style.display='flex'
+        }else if(val=='all'){
+            e.style.display='flex'
+        }else{
+            e.style.display='none'
+        }
+    })
 }
 // delete method
 const deleteAll = () => {
@@ -80,3 +98,4 @@ addTransactionBtn.addEventListener('click', openPopup)
 popupCloseBtn.addEventListener('click', closePopup)
 popupAddBtn.addEventListener('click', transaction)
 deleteAllBtn.addEventListener('click', deleteAll)
+group.addEventListener('change',groupExpenditures)

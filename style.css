@@ -192,6 +192,7 @@ body.dark-mode {
 
 .history {
     display: flex;
+    position: relative;
     justify-content: flex-start;
     gap: 2rem;
 }
@@ -204,6 +205,12 @@ body.dark-mode {
     display: flex;
     justify-content: space-between;
     font-size: 22px;
+}
+
+.history>#category {
+    position: absolute;
+    right: 10px;
+    width: 90px;
 }
 
 @media(orientation: landscape) {
